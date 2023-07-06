@@ -1,23 +1,22 @@
-import "./App.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { useState, useEffect } from "react";
+import "./App.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { useState, useEffect } from "react"
 
 function App() {
-  const url = "https://api.quotable.io/random";
-  const [data, setData] = useState([]);
+  const url = "https://api.quotable.io/random"
+  const [data, setData] = useState([])
 
   const fetchInfo = async () => {
-    const res = await fetch(url);
-    const d = await res.json();
-    return setData(d);
+    const res = await fetch(url)
+    const d = await res.json()
+    return setData(d)
   }
 
-
-  useEffect(() => {
-    fetchInfo();
-  }, []);
-
+  useEffect( () => {
+    fetchInfo()
+  }, [])
+//je met un commentaire
 
 
   return (
@@ -39,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
